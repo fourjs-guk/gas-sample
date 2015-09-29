@@ -1,0 +1,38 @@
+SCHEMA formonly
+
+LAYOUT (text=%"Form")
+Grid Grid1
+{
+
+ <G group1                                                                                                                                  >
+     [label1] [f_folio    ]       [label8][v_cmb_tipo_monto                 ]
+ <                                                                                                                                          >
+
+ <G gr_info_reg_pag                                                                                                                         >
+  [lbl_reg_pag                                                 ]
+ <                                                                                                                                          >
+
+ <G gr_info_precio                                                                                                                          >
+  [lbl_precio                                                  ]
+ <                                                                                                                                          >
+
+
+}
+END -- Grid1
+END -- Form
+
+ATTRIBUTES
+Group group1:Group1, text=%"Criterios de Búsqueda";
+Label label1:Label1, text=%"Folio:";
+Edit f_folio=formonly.f_folio type CHAR, tabIndex=1;
+Label label8:Label8, text=%"Tipo:";
+ComboBox v_cmb_tipo_monto=formonly.v_cmb_tipo_monto type CHAR, tabIndex=5, items=(("1", "MAYOR A $2"),("2", "MENOR O IGUAL A $2"));
+Group gr_info_reg_pag:gr_info_reg_pag, text=%"Información de Registro de Pagos";
+Label lbl_reg_pag:lbl_reg_pag, text=%"Folio de Registro de Pagos:";
+Group gr_info_precio:gr_info_precio, text=%"Información Adicional";
+Label lbl_precio:lbl_precio, text=%"Información de AIVS";
+END -- ATTRIBUTES
+
+INSTRUCTIONS
+SCREEN RECORD Undefined(formonly.f_folio,formonly.v_cmb_tipo_monto)
+END -- INSTRUCTIONS

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Project defaultApplication="476241985" gstVersion="23217" version="3.0">
+  <Settings/>
+  <LanguageList version="1.0"/>
+  <PlatformList version="1.0"/>
+  <Group label="efp_MEX_1916" targetDirectory="$(ProjectDir)">
+    <Library id="167851000" label="config">
+      <File filePath="estilos.4st"/>
+      <File filePath="sm_app.4sm"/>
+    </Library>
+    <Application id="476241985" label="menu">
+      <File filePath="menu.4gl"/>
+    </Application>
+    <Application id="58335765" label="test_4">
+      <File filePath="DISC111.per"/>
+      <File filePath="test_4.4gl"/>
+    </Application>
+    <Application id="279072800" label="test_5">
+      <File filePath="DISC111_1.per"/>
+      <File filePath="DISC111_5.per"/>
+      <File excludeFromCompilation="true" excludeFromLink="true" filePath="test_5_0.4gl"/>
+      <File excludeFromCompilation="true" excludeFromLink="true" filePath="test_5_1.4gl"/>
+      <File excludeFromCompilation="true" excludeFromLink="true" filePath="test_5_2.4gl"/>
+      <File excludeFromCompilation="true" excludeFromLink="true" filePath="test_5_3.4gl"/>
+      <File excludeFromCompilation="true" excludeFromLink="true" filePath="test_5_4.4gl"/>
+      <File filePath="test_5_5.4gl"/>
+    </Application>
+    <Application id="209634156" label="test_6">
+      <File filePath="DISC111_6.per"/>
+      <File filePath="test_6.4gl"/>
+    </Application>
+  </Group>
+</Project>

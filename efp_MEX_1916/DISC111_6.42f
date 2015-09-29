@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<Form name="DISC111_6" build="2.50.23-2343.45" text="Form" width="140" height="15">
+  <LStr text="Form"/>
+  <Grid name="grid1" width="140" height="15">
+    <Label name="label1" width="6" text="Folio:" posY="2" posX="6" gridWidth="6">
+      <LStr text="Folio:"/>
+    </Label>
+    <FormField name="formonly.f_folio" colName="f_folio" sqlType="CHAR" fieldId="0" sqlTabName="formonly" tabIndex="1">
+      <Edit width="11" posY="2" posX="15" gridWidth="11"/>
+    </FormField>
+    <Label name="label8" width="6" text="Tipo:" posY="2" posX="35" gridWidth="6">
+      <LStr text="Tipo:"/>
+    </Label>
+    <FormField name="formonly.v_cmb_tipo_monto" colName="v_cmb_tipo_monto" sqlType="CHAR" fieldId="1" sqlTabName="formonly" tabIndex="5">
+      <ComboBox width="31" posY="2" posX="43" gridWidth="33">
+        <Item name="1" text="MAYOR A $2"/>
+        <Item name="2" text="MENOR O IGUAL A $2"/>
+      </ComboBox>
+    </FormField>
+    <Label name="label4" width="22" text="MONTOS" justify="center" posY="7" posX="40" gridWidth="22">
+      <LStr text="MONTOS"/>
+    </Label>
+    <Table pageSize="4" name="table1" width="138" posY="8" posX="2" gridWidth="138" gridHeight="5" tabName="src_superiores">
+      <TableColumn name="formonly.descripcion_sup" colName="descripcion_sup" sqlType="CHAR" fieldId="2" sqlTabName="formonly" tabIndex="4" text="" noEntry="1">
+        <Edit width="24" format=""/>
+        <LStr text=""/>
+      </TableColumn>
+      <TableColumn name="formonly.avance_apo_sup" colName="avance_apo_sup" sqlType="CHAR" fieldId="3" sqlTabName="formonly" tabIndex="2" text="Aportación">
+        <Edit width="22" format="-###,###,###,##&amp;.&amp;&amp;"/>
+        <LStr text="Aportación"/>
+      </TableColumn>
+      <TableColumn name="formonly.avance_amo_sup" colName="avance_amo_sup" sqlType="CHAR" fieldId="4" sqlTabName="formonly" tabIndex="3" text="Amortización">
+        <Edit width="22" format="-###,###,###,##&amp;.&amp;&amp;"/>
+        <LStr text="Amortización"/>
+      </TableColumn>
+      <TableColumn name="formonly.apo_amo" colName="apo_amo" sqlType="CHAR" fieldId="5" sqlTabName="formonly" tabIndex="17" text="Total">
+        <Edit width="26" format="-###,###,###,##&amp;.&amp;&amp;"/>
+        <LStr text="Total"/>
+      </TableColumn>
+    </Table>
+  </Grid>
+  <RecordView tabName="formonly">
+    <Link colName="f_folio" fieldIdRef="0"/>
+    <Link colName="v_cmb_tipo_monto" fieldIdRef="1"/>
+    <Link colName="descripcion_sup" fieldIdRef="2"/>
+    <Link colName="avance_apo_sup" fieldIdRef="3"/>
+    <Link colName="avance_amo_sup" fieldIdRef="4"/>
+    <Link colName="apo_amo" fieldIdRef="5"/>
+  </RecordView>
+  <RecordView tabName="undefined">
+    <Link colName="f_folio" fieldIdRef="0"/>
+    <Link colName="v_cmb_tipo_monto" fieldIdRef="1"/>
+  </RecordView>
+</Form>

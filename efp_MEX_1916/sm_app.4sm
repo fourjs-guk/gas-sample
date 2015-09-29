@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<StartMenu text="MEX_1916">
+      <StartMenuGroup text="Tests" >
+        <StartMenuCommand text="TEST4" name="test4" exec="fglrun test_4.42r" image="ssmiley"/>
+        <StartMenuCommand text="TEST5" name="test5" exec="fglrun test_5.42r" image="smiley"/>
+        <StartMenuCommand text="TEST6" name="test6" exec="fglrun test_6.42r" image="wizard"/>
+      </StartMenuGroup>
+</StartMenu>

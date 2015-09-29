@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<StartMenu text="IN84110227          ">
+  <StartMenuGroup text="Consultas generales                      »" name="19                                      ">
+    <StartMenuGroup text="Derechohabiente                         " name="19.00                                   ">
+      <StartMenuCommand text="Datos Generales                         " name="19.00.00                                " exec="cd /ds/safreviv/afi/bin; fglrun AFIC01.42r IN84110227           0  &apos;Datos Generales&apos;" image="safre_icon.ico"/>
+      <StartMenuCommand text="Marcas                                  " name="19.00.01                                " exec="cd /ds/safreviv/cta/bin; fglrun CTAC02.42r IN84110227           0  &apos;Marcas&apos;" image="safre_icon.ico"/>
+    </StartMenuGroup>
+    <StartMenuGroup text="Saldos                                  " name="19.01                                   ">
+      <StartMenuCommand text="Fondo Anterior                          " name="19.01.00                                " exec="cd /ds/safreviv/cta/bin; fglrun CTAC06.42r IN84110227           0  &apos;Fondo Anterior&apos;" image="safre_icon.ico"/>
+      <StartMenuCommand text="Decreto                                 " name="19.01.01                                " exec="cd /ds/safreviv/cta/bin; fglrun CTAC03.42r IN84110227           0  &apos;Decreto&apos;" image="safre_icon.ico"/>
+      <StartMenuCommand text="Vivienda                                " name="19.01.02                                " exec="cd /ds/safreviv/cta/bin; fglrun CTAC01.42r IN84110227           0  &apos;Vivienda&apos;" image="safre_icon.ico"/>
+      <StartMenuCommand text="Global                                  " name="19.01.03                                " exec="cd /ds/safreviv/cta/bin; fglrun CTAC05.42r IN84110227           0  &apos;Global&apos;" image="safre_icon.ico"/>
+    </StartMenuGroup>
+    <StartMenuGroup text="Procesos                                " name="19.02                                   ">
+      <StartMenuCommand text="Ejecución                               " name="19.02.00                                " exec="cd /ds/safreviv/bat/bin; fglrun BATM60.42r IN84110227           0  &apos;Ejecución&apos;" image="safre_icon.ico"/>
+    </StartMenuGroup>
+  </StartMenuGroup>
+  <StartMenuGroup text="Administración                           »" name="20                                      ">
+    <StartMenuGroup text="Catálogos                               " name="20.01                                   ">
+      <StartMenuGroup text="Seguridad                               " name="20.01.00                                ">
+        <StartMenuCommand text="TEST3 - MEX_1888                        " name="20.01.00.07                             " exec="fglrun test_3.42r" image="ssmiley"/>
+        <StartMenuCommand text="TEST4 - MEX_1916                        " name="20.01.00.08                             " exec="fglrun test_4.42r" image="smiley"/>
+        <StartMenuCommand text="TEST5 - MEX_1916                        " name="20.01.00.09                             " exec="fglrun test_5.42r" image="wizard"/>
+      </StartMenuGroup>
+    </StartMenuGroup>
+  </StartMenuGroup>
+  <StartMenuGroup text="Jurídico                                 »" name="21                                      ">
+    <StartMenuGroup text="Marcas                                  " name="21.00                                   "/>
+  </StartMenuGroup>
+</StartMenu>

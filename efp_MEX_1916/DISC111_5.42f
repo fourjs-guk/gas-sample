@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<Form name="DISC111_5" build="2.50.23-2343.45" text="Form" width="141" height="14">
+  <LStr text="Form"/>
+  <Grid name="grid1" width="141" height="14">
+    <Group name="group1" text="Criterios de Búsqueda" posY="1" posX="1" gridWidth="140" gridHeight="3">
+      <LStr text="Criterios de Búsqueda"/>
+      <Label name="label1" width="6" text="Folio:" posY="1" posX="5" gridWidth="6">
+        <LStr text="Folio:"/>
+      </Label>
+      <FormField name="formonly.f_folio" colName="f_folio" sqlType="CHAR" fieldId="0" sqlTabName="formonly" tabIndex="1">
+        <Edit width="11" posY="1" posX="14" gridWidth="11"/>
+      </FormField>
+      <Label name="label8" width="6" text="Tipo:" posY="1" posX="34" gridWidth="6">
+        <LStr text="Tipo:"/>
+      </Label>
+      <FormField name="formonly.v_cmb_tipo_monto" colName="v_cmb_tipo_monto" sqlType="CHAR" fieldId="1" sqlTabName="formonly" tabIndex="5">
+        <ComboBox width="31" posY="1" posX="42" gridWidth="33">
+          <Item name="1" text="MAYOR A $2"/>
+          <Item name="2" text="MENOR O IGUAL A $2"/>
+        </ComboBox>
+      </FormField>
+    </Group>
+    <Group name="gr_info_reg_pag" text="Información de Registro de Pagos" posY="5" posX="1" gridWidth="140" gridHeight="3">
+      <LStr text="Información de Registro de Pagos"/>
+      <Label name="lbl_reg_pag" width="60" text="Folio de Registro de Pagos:" posY="1" posX="2" gridWidth="60">
+        <LStr text="Folio de Registro de Pagos:"/>
+      </Label>
+    </Group>
+    <Group name="gr_info_precio" text="Información Adicional" posY="9" posX="1" gridWidth="140" gridHeight="3">
+      <LStr text="Información Adicional"/>
+      <Label name="lbl_precio" width="60" text="Información de AIVS" posY="1" posX="2" gridWidth="60">
+        <LStr text="Información de AIVS"/>
+      </Label>
+    </Group>
+  </Grid>
+  <RecordView tabName="formonly">
+    <Link colName="f_folio" fieldIdRef="0"/>
+    <Link colName="v_cmb_tipo_monto" fieldIdRef="1"/>
+  </RecordView>
+  <RecordView tabName="undefined">
+    <Link colName="f_folio" fieldIdRef="0"/>
+    <Link colName="v_cmb_tipo_monto" fieldIdRef="1"/>
+  </RecordView>
+</Form>

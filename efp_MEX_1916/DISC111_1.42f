@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<Form name="DISC111_1" build="2.50.23-2343.45" text="Form" width="141" height="51">
+  <LStr text="Form"/>
+  <Grid name="grid1" width="141" height="51">
+    <Group name="group1" text="Criterios de Búsqueda" posY="1" posX="1" gridWidth="140" gridHeight="3">
+      <LStr text="Criterios de Búsqueda"/>
+      <Label name="label1" width="6" text="Folio:" posY="1" posX="5" gridWidth="6">
+        <LStr text="Folio:"/>
+      </Label>
+      <FormField name="formonly.f_folio" colName="f_folio" sqlType="CHAR" fieldId="0" sqlTabName="formonly" tabIndex="1">
+        <Edit width="11" posY="1" posX="14" gridWidth="11"/>
+      </FormField>
+      <Label name="label8" width="6" text="Tipo:" posY="1" posX="34" gridWidth="6">
+        <LStr text="Tipo:"/>
+      </Label>
+      <FormField name="formonly.v_cmb_tipo_monto" colName="v_cmb_tipo_monto" sqlType="CHAR" fieldId="1" sqlTabName="formonly" tabIndex="5">
+        <ComboBox width="31" posY="1" posX="42" gridWidth="33">
+          <Item name="1" text="MAYOR A $2"/>
+          <Item name="2" text="MENOR O IGUAL A $2"/>
+        </ComboBox>
+      </FormField>
+    </Group>
+    <Group name="gr_info_reg_pag" text="Información de Registro de Pagos" posY="5" posX="1" gridWidth="140" gridHeight="3">
+      <LStr text="Información de Registro de Pagos"/>
+      <Label name="lbl_reg_pag" width="60" text="Folio de Registro de Pagos:" posY="1" posX="2" gridWidth="60">
+        <LStr text="Folio de Registro de Pagos:"/>
+      </Label>
+    </Group>
+    <Group name="gr_info_precio" text="Información Adicional" posY="9" posX="1" gridWidth="140" gridHeight="3">
+      <LStr text="Información Adicional"/>
+      <Label name="lbl_precio" width="60" text="Información de AIVS" posY="1" posX="2" gridWidth="60">
+        <LStr text="Información de AIVS"/>
+      </Label>
+    </Group>
+    <Group name="gr_pago_superior" text="Información de Diferencias" posY="14" posX="1" gridWidth="140" gridHeight="10">
+      <LStr text="Información de Diferencias"/>
+      <Label name="label4" width="22" text="MONTOS" justify="center" posY="1" posX="39" gridWidth="22">
+        <LStr text="MONTOS"/>
+      </Label>
+      <Table pageSize="4" name="table1" width="138" posY="2" posX="1" gridWidth="138" gridHeight="5" tabName="src_superiores">
+        <TableColumn name="formonly.descripcion_sup" colName="descripcion_sup" sqlType="CHAR" fieldId="2" sqlTabName="formonly" tabIndex="4" text="" noEntry="1">
+          <Edit width="24" format=""/>
+          <LStr text=""/>
+        </TableColumn>
+        <TableColumn name="formonly.avance_apo_sup" colName="avance_apo_sup" sqlType="CHAR" fieldId="3" sqlTabName="formonly" tabIndex="2" text="Aportación">
+          <Edit width="22" format="-###,###,###,##&amp;.&amp;&amp;"/>
+          <LStr text="Aportación"/>
+        </TableColumn>
+        <TableColumn name="formonly.avance_amo_sup" colName="avance_amo_sup" sqlType="CHAR" fieldId="4" sqlTabName="formonly" tabIndex="3" text="Amortización">
+          <Edit width="22" format="-###,###,###,##&amp;.&amp;&amp;"/>
+          <LStr text="Amortización"/>
+        </TableColumn>
+        <TableColumn name="formonly.apo_amo" colName="apo_amo" sqlType="CHAR" fieldId="5" sqlTabName="formonly" tabIndex="17" text="Total">
+          <Edit width="26" format="-###,###,###,##&amp;.&amp;&amp;"/>
+          <LStr text="Total"/>
+        </TableColumn>
+      </Table>
+    </Group>
+    <Group name="gr_inconsistente" text="Información General de Inconsistencias" posY="25" posX="1" gridWidth="140" gridHeight="8">
+      <LStr text="Información General de Inconsistencias"/>
+      <Table pageSize="3" name="tb_inconsistente" width="138" posY="2" posX="1" gridWidth="138" gridHeight="5" tabName="src_inconsistente">
+        <TableColumn name="formonly.info_aivs" colName="info_aivs" sqlType="CHAR" fieldId="6" sqlTabName="formonly" tabIndex="18" text="AIVS">
+          <Edit width="19" format="-###,###,###,##&amp;.&amp;&amp;"/>
+          <LStr text="AIVS"/>
+        </TableColumn>
+        <TableColumn name="formonly.info_apo" colName="info_apo" sqlType="CHAR" fieldId="7" sqlTabName="formonly" tabIndex="6" text="Aportación">
+          <Edit width="19" format="###,###,##&amp;.&amp;&amp;"/>
+          <LStr text="Aportación"/>
+        </TableColumn>
+        <TableColumn name="formonly.info_amo" colName="info_amo" sqlType="CHAR" fieldId="8" sqlTabName="formonly" tabIndex="7" text="Amortización">
+          <Edit width="20" format="###,###,##&amp;.&amp;&amp;"/>
+          <LStr text="Amortización"/>
+        </TableColumn>
+        <TableColumn name="formonly.info_cuentas" colName="info_cuentas" sqlType="CHAR" fieldId="9" sqlTabName="formonly" tabIndex="8" text="Total&#10;Cuentas">
+          <Edit width="14" justify="center"/>
+          <LStr text="Total&#10;Cuentas"/>
+        </TableColumn>
+        <TableColumn name="formonly.info_inconsistente" colName="info_inconsistente" sqlType="CHAR" fieldId="10" sqlTabName="formonly" tabIndex="9" text="Tipo Inconsistente">
+          <Edit width="49"/>
+          <LStr text="Tipo Inconsistente"/>
+        </TableColumn>
+      </Table>
+    </Group>
+    <Group name="gr_ceros" text="Información Sin Número de Crédito" posY="35" posX="1" gridWidth="140" gridHeight="13">
+      <LStr text="Información Sin Número de Crédito"/>
+      <Table pageSize="5" name="tb_inconsistente1" width="138" posY="2" posX="1" gridWidth="138" gridHeight="10" tabName="src_inconsistentes_ceros">
+        <TableColumn name="formonly.v_nss" colName="v_nss" sqlType="CHAR" fieldId="11" sqlTabName="formonly" tabIndex="10" text="NSS">
+          <Edit width="18" justify="center"/>
+          <LStr text="NSS"/>
+        </TableColumn>
+        <TableColumn name="formonly.v_nrp" colName="v_nrp" sqlType="CHAR" fieldId="12" sqlTabName="formonly" tabIndex="11" text="NRP">
+          <Edit width="18" justify="center"/>
+          <LStr text="NRP"/>
+        </TableColumn>
+        <TableColumn name="formonly.v_folio_sua" colName="v_folio_sua" sqlType="CHAR" fieldId="13" sqlTabName="formonly" tabIndex="12" text="Folio &#10;Sua">
+          <Edit width="12"/>
+          <LStr text="Folio &#10;Sua"/>
+        </TableColumn>
+        <TableColumn name="formonly.v_folio_ref" colName="v_folio_ref" sqlType="CHAR" fieldId="14" sqlTabName="formonly" tabIndex="13" text="Folio &#10;Registro&#10;Pagos">
+          <Edit width="14"/>
+          <LStr text="Folio &#10;Registro&#10;Pagos"/>
+        </TableColumn>
+        <TableColumn name="formonly.v_folio_dis" colName="v_folio_dis" sqlType="CHAR" fieldId="15" sqlTabName="formonly" tabIndex="14" text="Folio &#10;Liquidación">
+          <Edit width="12"/>
+          <LStr text="Folio &#10;Liquidación"/>
+        </TableColumn>
+        <TableColumn name="formonly.v_aivs" colName="v_aivs" sqlType="CHAR" fieldId="16" sqlTabName="formonly" tabIndex="19" text="AIVS">
+          <Edit width="18" format="###,###,##&amp;.&amp;&amp;"/>
+          <LStr text="AIVS"/>
+        </TableColumn>
+        <TableColumn name="formonly.v_apo" colName="v_apo" sqlType="CHAR" fieldId="17" sqlTabName="formonly" tabIndex="15" text="Aportación">
+          <Edit width="18" justify="right" format="###,###,##&amp;.&amp;&amp;"/>
+          <LStr text="Aportación"/>
+        </TableColumn>
+        <TableColumn name="formonly.v_amo" colName="v_amo" sqlType="CHAR" fieldId="18" sqlTabName="formonly" tabIndex="16" text="Amortización">
+          <Edit width="18" justify="right" format="###,###,##&amp;.&amp;&amp;"/>
+          <LStr text="Amortización"/>
+        </TableColumn>
+      </Table>
+    </Group>
+  </Grid>
+  <RecordView tabName="formonly">
+    <Link colName="f_folio" fieldIdRef="0"/>
+    <Link colName="v_cmb_tipo_monto" fieldIdRef="1"/>
+    <Link colName="descripcion_sup" fieldIdRef="2"/>
+    <Link colName="avance_apo_sup" fieldIdRef="3"/>
+    <Link colName="avance_amo_sup" fieldIdRef="4"/>
+    <Link colName="apo_amo" fieldIdRef="5"/>
+    <Link colName="info_aivs" fieldIdRef="6"/>
+    <Link colName="info_apo" fieldIdRef="7"/>
+    <Link colName="info_amo" fieldIdRef="8"/>
+    <Link colName="info_cuentas" fieldIdRef="9"/>
+    <Link colName="info_inconsistente" fieldIdRef="10"/>
+    <Link colName="v_nss" fieldIdRef="11"/>
+    <Link colName="v_nrp" fieldIdRef="12"/>
+    <Link colName="v_folio_sua" fieldIdRef="13"/>
+    <Link colName="v_folio_ref" fieldIdRef="14"/>
+    <Link colName="v_folio_dis" fieldIdRef="15"/>
+    <Link colName="v_aivs" fieldIdRef="16"/>
+    <Link colName="v_apo" fieldIdRef="17"/>
+    <Link colName="v_amo" fieldIdRef="18"/>
+  </RecordView>
+  <RecordView tabName="undefined">
+    <Link colName="f_folio" fieldIdRef="0"/>
+    <Link colName="v_cmb_tipo_monto" fieldIdRef="1"/>
+  </RecordView>
+</Form>

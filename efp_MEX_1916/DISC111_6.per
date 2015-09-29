@@ -1,0 +1,43 @@
+SCHEMA formonly
+
+LAYOUT (text=%"Form")
+Grid Grid1
+{
+
+
+     [label1] [f_folio    ]       [label8][v_cmb_tipo_monto                 ]
+
+
+
+
+                                       [label4                ]
+  <T table1                                                                                                                                >
+  [descripcion_sup         |avance_apo_sup        |avance_amo_sup        |apo_amo                   ]
+  [descripcion_sup         |avance_apo_sup        |avance_amo_sup        |apo_amo                   ]
+  [descripcion_sup         |avance_apo_sup        |avance_amo_sup        |apo_amo                   ]
+  [descripcion_sup         |avance_apo_sup        |avance_amo_sup        |apo_amo                   ]
+
+
+}
+END -- Grid1
+END -- Form
+
+ATTRIBUTES
+
+Label label1:Label1, text=%"Folio:";
+Edit f_folio=formonly.f_folio type CHAR, tabIndex=1;
+Label label8:Label8, text=%"Tipo:";
+ComboBox v_cmb_tipo_monto=formonly.v_cmb_tipo_monto type CHAR, tabIndex=5, items=(("1", "MAYOR A $2"),("2", "MENOR O IGUAL A $2"));
+
+Label label4:Label4, text=%"MONTOS", justify=center;
+Table table1:Table1;
+Edit descripcion_sup=formonly.descripcion_sup type CHAR, tabIndex=4, title=%"", noEntry, format="";
+Edit avance_apo_sup=formonly.avance_apo_sup type CHAR, tabIndex=2, title=%"Aportación", format="-###,###,###,##&.&&";
+Edit avance_amo_sup=formonly.avance_amo_sup type CHAR, tabIndex=3, title=%"Amortización", format="-###,###,###,##&.&&";
+Edit apo_amo=formonly.apo_amo type CHAR, tabIndex=17, title=%"Total", format="-###,###,###,##&.&&";
+END -- ATTRIBUTES
+
+INSTRUCTIONS
+SCREEN RECORD Undefined(formonly.f_folio,formonly.v_cmb_tipo_monto)
+SCREEN RECORD src_superiores(formonly.descripcion_sup,formonly.avance_apo_sup,formonly.avance_amo_sup,formonly.apo_amo)
+END -- INSTRUCTIONS
